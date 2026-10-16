@@ -1,6 +1,6 @@
 Flask
 Flask-wtf
 cryptography
-passlib[bcrypt]
+bcrypt
 python-dotenv
 gunicorn

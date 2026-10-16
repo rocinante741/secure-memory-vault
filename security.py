@@ -1,6 +1,6 @@
 from dotenv import load_dotenv
 import os
-from passlib.hash import bcrypt
+import bcrypt
 from cryptography.fernet import Fernet
 
 #-----------------------------------=
@@ -26,20 +26,17 @@ fernet = Fernet(FERNET_KEY)
 # Password hashing
 #---------------------------------------
 
-def hash_password(plain_password):
-	"""
-	Hashes a password using bcrypt.
-	Never store plaintext passwords.
-	"""
-	safe_password = plain_password[:72]
-	return bcrypt.hash(safe_password)
+import bcrypt
 
-def verify_password(plain_passsword, hashed_password):
-	"""
-	Verifies a password during login.
-	"""
-	safe_password = plain_password[:72]
-	return bcrypt.verify(safe_password, hashed_password)
+def hash_password(plain_password):
+    safe_password = plain_password[:72].encode("utf-8")
+    salt = bcrypt.gensalt()
+    return bcrypt.hashpw(safe_password, salt).decode("utf-8")
+
+def verify_password(plain_password, hashed_password):
+    safe_password = plain_password[:72].encode("utf-8")
+    return bcrypt.checkpw(safe_password, hashed_password.encode("utf-8"))
+
 
 #-------------------------------------------
 # Encryption helpers
