@@ -97,7 +97,7 @@ def login():
 			return render_template("login.html")
 
 		session["user_id"] = user["id"]
-		session["username"] - user["username"]
+		session["username"] = user["username"]
 		flash("Logged in.", "success")
 		return redirect(url_for("dashboard"))
 	return render_template("login.html")
@@ -114,7 +114,7 @@ def logout():
 
 @app.route("/dashboard")
 @login_required
-def daashboard():
+def dashboard():
 	user_id = session["user_id"]
 	memories = get_memories_for_user(user_id)
 	return render_template("dashboard.html", memories=memories)
