@@ -31,13 +31,15 @@ def hash_password(plain_password):
 	Hashes a password using bcrypt.
 	Never store plaintext passwords.
 	"""
-	return bcrypt.hash(plain_password)
+	safe_password = plain_password[:72]
+	return bcrypt.hash(safe_password)
 
 def verify_password(plain_passsword, hashed_password):
 	"""
 	Verifies a password during login.
 	"""
-	return bcrypt.verify(plain_password, hashed_password)
+	safe_password = plain_password[:72]
+	return bcrypt.verify(safe_password, hashed_password)
 
 #-------------------------------------------
 # Encryption helpers
