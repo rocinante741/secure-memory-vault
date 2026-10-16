@@ -1,0 +1,5 @@
+Flask
+Flask-wtf
+cryptography
+passlib[bcrypt]
+python-dotenv

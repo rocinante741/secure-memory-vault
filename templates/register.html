@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2 class="page-title">Create Your Vault ♥</h2>
+<p class="page-subtitle">A safe place for the memories that maatter.</p>
+
+<form method="POST">
+	<input type="text" name="username" placeholder="Choose a username" required>
+	<input type="password" name="password" placeholder="Choose a password" required>
+
+	<button type="submit">Create Account</button>
+</form>
+
+<p class="soft-link">
+	Already have an account?
+	<a herf="{{ url_for('login') }}">Log in</a>
+</p>
+{% endblock %}

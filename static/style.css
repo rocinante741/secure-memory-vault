@@ -1,0 +1,196 @@
+/* -----------------------------------
+	Romantic & Soft Theme
+   ----------------------------------- */
+
+body {
+	background: #fdf7f9; /* soft blush */
+	front-family: "Georgia, serif;
+	color: #5a4a4a;
+	margin: 0;
+	padding: 0;
+}
+
+/* ---------------------------------------
+	Navigation Bar
+---------------------------------------- */
+
+.navbar { 
+	background: #fbe9ef;
+	padding: 12px 20px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border-bottom: 2px solid #f3dce4;
+}
+
+.logo {
+	front-size: 22px;
+	front-weight: bold;
+	color: #c26a8q;
+	letter-spacing: 1px;
+}
+
+.nav-right a {
+	margin-left: 15px;
+	text-decoration: none;
+	color: #a05c74;
+	front-weight: bold;
+	transition: 0.2s;
+}
+
+.nav-right a:hover {
+	color: #d47a9b;
+}
+
+.logout {
+	color:#b84f6e;
+}
+
+/*---------------------------------------------
+	Flash messages 
+------------------------------------------------ */
+
+.flash-container {
+	width: 90%;
+	max-width: 600px;
+	margin: 20px auto;
+}
+
+.flash {
+	padding: 12px 15px;
+	border-radius: 10px;
+	margin-bottom: 10px;
+	front-size: 15px;
+	box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
+}
+
+.flash.success {
+	background: #e8f6e9;
+	color: #3a6b3f;
+}
+
+.flash.warning {
+	background: #fff7e6;
+	color: #8a6d3b;
+}
+
+.flash.danger {
+	background: #fdeaea;
+	color: #8a3b3b;
+}
+
+.flash.info {
+	background: #e9f2fd;
+	color: #3b5c8a;
+}
+
+/*------------------------------------------
+	Main Content Area 
+----------------------------------------- */
+
+.content {
+	width: 90%;
+	max-width: 700px;
+	margin: 40px auto;
+	background: #ffffff;
+	padding: 25px;
+	border-radius: 15px;
+	box-shadow: 0px 4px 10px rgba(0,0,0,0.05);
+}
+
+/*-----------------------------------------------
+	Forms
+------------------------------------------------ */
+
+form { 
+	display: flex;
+	flex-direction: column;
+}
+
+input, textarea {
+	padding: 12px
+	margin-bottom: 15px;
+	border: 1px solid #e3cbd4;
+	border-radius: 10px;
+	font-size: 16px;
+	background: #fff9fb;
+}
+
+textarea { 
+	min-height: 150px;
+}
+
+button {
+	padding: 12px;
+	background: #d47a9b;
+	color: white;
+	border: none;
+	border-radius: 10px;
+	font-size: 16px;
+	cursor: pointer;
+	transition: 0.2s;
+}
+
+button:hover {
+	background: #c26a8a;
+}
+
+/* ---------------------------------------
+	Memory Cards
+----------------------------------------- */
+
+.memory-card {
+	background: #fff9fb;
+	border: 1px solid #f3dce4;
+	padding: 15px;
+	border-radius: 12px;
+	margin-bottom: 15px;
+	box-shadow: 0px 2px 5px rgba(0,0,0,0.05);
+}
+
+.memory-titlw{
+	font-size: 20px;
+	color: #b84f6e;
+	margin-bottom: 8px;
+}
+
+.memory-date {
+	font-size: 13px;
+	color: #8a6d7a;
+}
+
+/* -----------------------------------------------------
+extra add on from login and register 
+-------------------------------------------------------*/
+
+
+.page-title {
+	text-align: center;
+	front-size: 28px;
+	color: #b84f6e;
+	margin-bottom: 5px;
+}
+
+.page-subtitle {
+	text-align: center;
+	font-size: 16px;
+	color: #8a6d7a;
+	margin-bottom: 25px;
+}
+
+.soft-link {
+	text-align: center;
+	margin-top: 15px;
+	color: #8a6d7a;
+}
+
+.soft-link a {
+	color: #c26a8a;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+.soft-link a:hover {
+	color: #d47a9b;
+}
+

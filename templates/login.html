@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2 class="page-title">Welcome Back ♥</h2>
+<p class="page-subtitle">Log in to revisityour cherished memories.</p>
+
+<form method="POST">
+	<input type="text" name="username" placeholder="Username" required>
+	<input type="password" name="password" placeholder="Password" required>
+
+	<button type="submit">Log In</button>
+</form>
+
+<p class="soft-link">
+	Don't have an account yet?
+	<a href="{{ url_for('register') }}">Create one</a>
+</p>
+{% endblock %}

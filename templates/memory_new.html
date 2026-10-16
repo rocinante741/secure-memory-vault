@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2 class="page-title">Write a Memory ♡</h2>
+<p class="page-subtitle">Capture a moment, a feeling, or a thought.</p>
+
+<form method="POST">
+    <input type="text" name="title" placeholder="Memory title" required>
+
+    <textarea name="content" placeholder="Write your memory here..." required></textarea>
+
+    <label style="color:#8a6d7a; margin-bottom:8px;">
+        Seal this memory until (optional):
+    </label>
+    <input type="date" name="sealed_until">
+
+    <button type="submit">Save Memory</button>
+</form>
+{% endblock %}

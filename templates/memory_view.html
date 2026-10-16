@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2 class="page-title">{{ memory.title }} ♡</h2>
+<p class="page-subtitle">A moment kept safe for you.</p>
+
+<div class="memory-card">
+    <div class="memory-date">
+        Saved on memory #{{ memory.id }}
+    </div>
+
+    <p style="white-space: pre-wrap; margin-top: 15px; font-size: 17px;">
+        {{ content }}
+    </p>
+</div>
+
+<a href="{{ url_for('dashboard') }}" class="soft-link">← Back to Memories</a>
+{% endblock %}

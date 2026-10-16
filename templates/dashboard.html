@@ -1,0 +1,37 @@
+
+{% extends "base.html" %}
+
+{% block content %}
+<h2 class="page-title">Your Memories ♡</h2>
+<p class="page-subtitle">A collection of moments worth protecting.</p>
+
+<a href="{{ url_for('memory_new') }}">
+    <button style="width: 100%; margin-bottom: 20px;">Write a New Memory</button>
+</a>
+
+{% if memories %}
+    {% for memory in memories %}
+        <div class="memory-card">
+            <div class="memory-title">{{ memory.title }}</div>
+            <div class="memory-date">
+                Saved on {{ memory.id }} • 
+                {% if memory.sealed_until %}
+                    Sealed until {{ memory.sealed_until }}
+                {% else %}
+                    Ready to open anytime
+                {% endif %}
+            </div>
+
+            <a href="{{ url_for('memory_view', memory_id=memory.id) }}" class="soft-link">
+                Open Memory →
+            </a>
+        </div>
+    {% endfor %}
+{% else %}
+    <p style="text-align:center; color:#8a6d7a;">
+        You haven’t saved any memories yet.  
+        <br>Start by creating your first one ♡
+    </p>
+{% endif %}
+{% endblock %}
+

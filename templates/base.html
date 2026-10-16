@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Secure Memory Vault</title>
+	<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+	<nav class="navbar">
+		<div class="nav-left">
+			<span class="logo">♥ Memory Vault</span>
+		</div>
+
+		<div class="nav-right">
+			{% if session.username %}
+				<span class+"welcome">Hi, {{ session.username }}</span>
+				<a herf="{{ url_for('dashboard') }}">Dashboard</a>
+				<a href="{{ url_for('memory_new') }}">New Memory</a>
+				<a href="{{ url_for('logout') }}" class="logout">Logout</a>
+			{% else %}
+				<a herf="{{ url_for('login') }}>Login</a>
+				<a href="{{ url_for('register') }}">Register</a>
+			{% endif %}
+		</div>
+	</nav>
+
+	<!-- Flash messages -->
+	<div class="flash-container">
+		{% for message in get_flashed_messages(with_categories=true) %}
+			<div class="flash {{ message[0] }}">{{ message[1] }}</div>
+		{% endfor %}
+	</div>
+
+	<main class="content">
+		{% block content %}
+		{% endblock %}
+	</main>
+</body>
+</html>

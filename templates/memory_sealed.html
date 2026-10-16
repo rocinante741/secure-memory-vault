@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2 class="page-title">This Memory is Sealed ♡</h2>
+<p class="page-subtitle">It’s waiting for the right moment.</p>
+
+<div class="memory-card" style="text-align:center;">
+    <div style="font-size:50px; color:#c26a8a; margin-bottom:10px;">
+        🔒
+    </div>
+
+    <p style="font-size:17px; color:#8a6d7a;">
+        This memory will unlock on  
+        <br>
+        <strong style="color:#b84f6e; font-size:20px;">
+            {{ sealed_date }}
+        </strong>
+    </p>
+</div>
+
+<a href="{{ url_for('dashboard') }}" class="soft-link">← Back to Memories</a>
+{% endblock %}

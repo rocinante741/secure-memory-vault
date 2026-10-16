@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: memory-vault
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app:app
+    envVars:
+      - key: MEMORY_VAULT_KEY
+        sync: false
+      - key: FLASK_SECRET_KEY
+        sync: false
