@@ -43,6 +43,12 @@ def verify_password(plain_passsword, hashed_password):
 # Encryption helpers
 #------------------------------------------
 
+def encrypt_content(plain_text):
+    """
+    Encrypts memory content before storing it.
+    """
+    return fernet.encrypt(plain_text.encode()).decode()
+
 def decrypt_content(cipher_text):
 	"""
 	Decrypts stored encrypted memory content.
