@@ -2,11 +2,11 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h2 class="page-title">Your Memories ♡</h2>
-<p class="page-subtitle">A collection of moments worth protecting.</p>
+<h2 class="page-title">Our Memories ♡</h2>
+<p class="page-subtitle">Even when we are old and grumpy, These will always be forever..</p>
 
 <a href="{{ url_for('memory_new') }}">
-    <button style="width: 100%; margin-bottom: 20px;">Write a New Memory</button>
+    <button style="width: 100%; margin-bottom: 20px;">Write a old or a new Memory</button>
 </a>
 
 {% if memories %}
@@ -29,8 +29,8 @@
     {% endfor %}
 {% else %}
     <p style="text-align:center; color:#8a6d7a;">
-        You haven’t saved any memories yet.  
-        <br>Start by creating your first one ♡
+        Where are our memories?.  
+        <br>Wrie your first one mami ♡
     </p>
 {% endif %}
 {% endblock %}
