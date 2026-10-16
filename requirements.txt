@@ -3,3 +3,4 @@ Flask-wtf
 cryptography
 passlib[bcrypt]
 python-dotenv
+gunicorn
